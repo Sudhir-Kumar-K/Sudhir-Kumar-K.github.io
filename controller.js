@@ -14,7 +14,7 @@ app.controller('myCtrl', function($scope, $http) {
     // Data Fetching
     $http({
         method: "GET",
-        url: "https://jsonplaceholder.typicode.com/comments"
+        url: "http://jsonplaceholder.typicode.com/comments"
     }).then(function(response) {
         $scope.commentsData = response.data;
         $scope.commentsCount = response.data.length;
