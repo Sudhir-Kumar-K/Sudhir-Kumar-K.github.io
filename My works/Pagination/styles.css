@@ -9,4 +9,5 @@
 
 .pagination-div {
     text-align: center;
+    cursor: pointer;
 }
