@@ -11,6 +11,8 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.pagesToShow = [];
     $scope.pagedComments = [];
     $scope.pagesPerScreen = 3;
+    $scope.loader = true;
+
     // Data Fetching
     $http({
         method: "GET",
@@ -24,8 +26,9 @@ app.controller('myCtrl', function($scope, $http) {
             $scope.range.push(i);
         }
         $scope.showPagedResult($scope.currentPage);
-
         $scope.pagesToShow = $scope.range.slice(0, $scope.pagesPerScreen);
+
+        $scope.loader = false;
     });
 
     $scope.showPagedResult = function(n) {
@@ -40,35 +43,6 @@ app.controller('myCtrl', function($scope, $http) {
         console.log('n is ' + n);
     }
 
-    // $scope.nextPages = function() {
-    //     if ($scope.currentPage < $scope.pageCount - $scope.pagesPerScreen) {
-    //         var cp = $scope.currentPage;
-    //         var pps = $scope.pagesPerScreen;
-    //         var page = Math.ceil(cp / pps) * pps;
-    //         $scope.pagesToShow = $scope.range.slice(page, page + pps);
-    //         console.log(page + '--> page');
-    //         console.log(page + pps + '--> page+pps');
-    //         console.log($scope.pagesToShow);
-    //         $scope.showPagedResult($scope.range[page]);
-    //     }
-
-    // }
-
-    // $scope.prevPages = function() {
-
-    //     if ($scope.currentPage > $scope.pagesPerScreen) {
-    //         var cp = $scope.currentPage;
-    //         var pps = $scope.pagesPerScreen;
-    //         var page = Math.floor(cp / pps) * pps;
-    //         $scope.pagesToShow = $scope.range.slice(page - pps, page);
-    //         console.log(page + '--> page');
-    //         console.log(page - pps + '--> page-pps');
-    //         console.log($scope.pagesToShow);
-    //         $scope.showPagedResult($scope.range[page]);
-    //     }
-
-
-    // }
 
 
 
