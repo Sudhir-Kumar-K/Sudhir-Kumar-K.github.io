@@ -103,7 +103,7 @@
 	/*---------------------------------------------------- */
 	/*	Masonry
 	------------------------------------------------------ */
-	var containerProjects = $('#folio-wrapper');
+	var containerProjects = $('.folio-wrapper');
 
 	containerProjects.imagesLoaded( function() {
 

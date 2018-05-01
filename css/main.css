@@ -47,6 +47,39 @@
 html {
   font-size: 10px;
 }
+.get-my-cv {
+    position: absolute;
+    top: 18px;
+    left: 5px;
+    transform: rotate(-30deg);
+    font-weight: bold;
+    color: #151515;
+    background: #ff0077;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+.techs {
+display: flex;
+flex-wrap: inherit;
+justify-content: center;
+align-items: center;
+}
+
+.tech-item {
+  margin: 10px;
+}
+
+.tech-item > img {
+  transition: height 0.2s ease;
+  height:50px!important;
+}
+.tech-item > img:hover {
+  height:60px!important;
+  cursor: pointer;
+}
+
 
 @media only screen and (max-width: 1024px) {
   html {
@@ -1593,7 +1626,7 @@ header .logo a {
 #about {
   background: #ffffff;
   padding-top: 12rem;
-  padding-bottom: 15rem;
+  padding-bottom: 5rem;
 }
 #about .section-intro {
   margin-bottom: 3rem;
