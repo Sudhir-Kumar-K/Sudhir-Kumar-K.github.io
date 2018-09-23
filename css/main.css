@@ -47,19 +47,6 @@
 html {
   font-size: 10px;
 }
-.get-my-cv {
-    position: absolute;
-    top: 18px;
-    left: 5px;
-    transform: rotate(-30deg);
-    font-weight: bold;
-    color: #151515;
-    background: #ff0077;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 15px;
-    font-size: 15px;
-}
 .techs {
 display: flex;
 flex-wrap: inherit;
@@ -2045,6 +2032,8 @@ header .logo a {
 }
 .popup-modal .description-box {
   padding: 1.8rem 3.6rem 3rem;
+  max-height: 200px;
+  overflow-y: auto;
 }
 .popup-modal .description-box h4 {
   font-family: "poppins-bold", sans-serif;
