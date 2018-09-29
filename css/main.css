@@ -58,6 +58,9 @@ align-items: center;
   margin: 10px;
 }
 
+.media > img {
+  height: 350px;
+}
 .tech-item > img {
   transition: height 0.2s ease;
   height:50px!important;
